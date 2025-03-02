@@ -21,11 +21,10 @@
             text-align: left;
             padding-left: 20px;
         }
-        .banner {
+        .container {
             width: 100%;
             max-width: 400px;
             margin: 0 auto;
-            display: block;
         }
         .banner img {
             width: 100%;
@@ -34,15 +33,13 @@
         }
         .login-container {
             width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 0;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         .login-container h2 {
-            color: #8b2e1c;
+            color: #ab4747;
         }
         .input-group {
             margin-bottom: 15px;
@@ -61,7 +58,7 @@
         .login-button {
             width: 100%;
             padding: 10px;
-            background-color: #8b2e1c;
+            background-color: #ab4747;
             color: white;
             border: none;
             border-radius: 0;
@@ -69,36 +66,38 @@
             cursor: pointer;
         }
         .login-button:hover {
-            background-color: #6b2314;
+            background-color: #a73b24;
         }
         .links {
             margin-top: 10px;
             font-size: 14px;
         }
         .links a {
-            color: #8b2e1c;
+            color: #ab4747;
             text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div class="header">KKU Network Auth Service</div>
-    <div class="banner">
-        <img src="./banner.png" alt="KKU Banner">
-    </div>
-    <div class="login-container">
-        <h2>Login</h2>
-        <div class="input-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" placeholder="KKU-Net Username">
+    <div class="container">
+        <div class="banner">
+            <img src="./banner.png" alt="KKU Banner">
         </div>
-        <div class="input-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" placeholder="KKU-Net Password">
-        </div>
-        <button class="login-button" onclick="login()">Login</button>
-        <div class="links">
-            <a href="#">Forgot password?</a>
+        <div class="login-container">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="KKU-Net Username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="KKU-Net Password">
+            </div>
+            <button class="login-button" onclick="login()">Login</button>
+            <div class="links">
+                <a href="#">Forgot password?</a>
+            </div>
         </div>
     </div>
 
