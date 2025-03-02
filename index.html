@@ -23,54 +23,79 @@
         }
         .container {
             width: 100%;
-            max-width: 400px;
+            max-width: 600px;
             margin: 0 auto;
         }
         .banner {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
+            width: 110%;
+            max-width: 500px;
+            margin: 0 auto 0 0;
+            text-align: left;
         }
         .banner img {
-            width: 100%;
+            width: 108.3%;
             height: auto;
             border-radius: 0;
             display: block;
         }
         .login-container {
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 0;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
+        .tab-container {
+            display: flex;
+
+            margin-bottom: 1px;
+        }
+        .tab {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            background-color: #f8f8f8;
+        }
+        .tab.active {
+            background-color: #e65c23;
+            color: white;
+            border-color: #e65c23;
+        }
         .login-container h2 {
             color: #ab4747;
         }
         .input-group {
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             text-align: left;
+            display: flex;
+            align-items: center;
         }
         .input-group label {
-            display: block;
             font-weight: bold;
+            margin-right: 10px;
+            width: 30%;
+            text-align: left;
         }
         .input-group input {
-            width: 100%;
+            width: 70%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 0;
+            margin-left: -70px;
         }
         .login-button {
-            width: 100%;
+            width: 12.5%;
             padding: 10px;
             background-color: #ab4747;
             color: white;
             border: none;
-            border-radius: 0;
+            border-radius: 3px;
             font-size: 16px;
             cursor: pointer;
+            margin-left: -255px;
         }
         .login-button:hover {
             background-color: #a73b24;
@@ -80,8 +105,28 @@
             font-size: 14px;
         }
         .links a {
-            color: #ab4747;
+            color: #000000;
             text-decoration: none;
+        }
+
+        .links a[href="cpr"] {
+            color: #000000;
+            margin-left: -300px;
+        }
+
+        .links a[href="help"] {
+            margin-left: -250px;
+            color: #e65c23;
+        }
+
+        .links a[href="forgot"] {
+            margin-left: 100px;
+            color: #e65c23;
+        }
+
+        .links a[href="clickKKC"] {
+            color: #e65c23;
+
         }
     </style>
 </head>
@@ -92,7 +137,11 @@
             <img src="./banner.png" alt="KKU Banner">
         </div>
         <div class="login-container">
-            <h2>Login</h2>
+            <div class="tab-container">
+                <div class="tab active">Login</div>
+                <div class="tab">Logged-In Devices</div>
+            </div>
+            <br><br><br><br>
             <div class="input-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" placeholder="KKU-Net Username">
@@ -102,9 +151,14 @@
                 <input type="password" id="password" placeholder="KKU-Net Password">
             </div>
             <button class="login-button" onclick="login()">Login</button>
-            <div class="links">
-                <a href="#">Forgot password?</a>
-            </div>
+            <br><br><br><br>
+        </div>
+        <div class="links">
+            <br>
+            <a href="help">👤Help/ช่วยเหลือ</a>
+            <a href="forgot">Forgot password?</a>
+            <br><br>
+            <a href="cpr">© Copyright 2019 </a><a href="clickKKC">Khon Kaen University</a>
         </div>
     </div>
 
